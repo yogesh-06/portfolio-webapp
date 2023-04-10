@@ -13,8 +13,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { styled } from '@mui/material/styles';
 import MHidden from '../@material-extend/MHidden';
 import Image from '../image/Image.js';
-import Logo from '../../assets/logo.png';
-import Resume from '../../assets/work-5.svg';
+import Logo from '../../assets/portfolio-webapp-logo.png';
+import Resume from '../../assets/yogesh-resume.jpg';
 // ----------------------------------------------------------------------
 
 const DRAWER_WIDTH = 280;
@@ -68,8 +68,10 @@ export default function DashboardNavbar({ onOpenSidebar }) {
 	return (
 		<RootStyle>
 			<ToolbarStyle>
-				<Box>
-					<img src={Logo} width={54} height={54} />
+				<Box boxShadow={20} id="#home">
+					<Link href="#home">
+						<img src={Logo} width={44} height={42} />
+					</Link>
 				</Box>
 				<Box sx={{ flexGrow: 100 }} />
 				<MHidden width="lgUp">
