@@ -12,9 +12,10 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import { styled } from '@mui/material/styles';
 import MHidden from '../@material-extend/MHidden';
-import Image from '../image/Image.js';
+import DownloadIcon from '@mui/icons-material/Download';
 import Logo from '../../assets/portfolio-webapp-logo.png';
 import Resume from '../../assets/yogesh-resume.jpg';
+import { makeStyles } from '@mui/styles';
 // ----------------------------------------------------------------------
 
 const DRAWER_WIDTH = 280;
@@ -39,6 +40,17 @@ const ToolbarStyle = styled(Toolbar)(({ theme }) => ({
 	},
 }));
 
+const useStyles = makeStyles((theme) => ({
+	logoImg: {
+		borderRadius: 3,
+		width: 34,
+		height: 32,
+		[theme.breakpoints.up('md')]: {
+			width: 44,
+			height: 42,
+		},
+	},
+}));
 // ----------------------------------------------------------------------
 
 const navItems = [
@@ -65,12 +77,13 @@ const navItems = [
 ];
 
 export default function DashboardNavbar({ onOpenSidebar }) {
+	const classes = useStyles();
 	return (
 		<RootStyle>
 			<ToolbarStyle>
 				<Box boxShadow={20} id="#home">
 					<Link href="#home">
-						<img src={Logo} width={44} height={42} />
+						<img className={classes.logoImg} style={{}} src={Logo} />
 					</Link>
 				</Box>
 				<Box sx={{ flexGrow: 100 }} />
@@ -144,6 +157,7 @@ export default function DashboardNavbar({ onOpenSidebar }) {
 					<Link href={Resume} download>
 						<Button
 							variant="outlined"
+							endIcon={<DownloadIcon />}
 							sx={{
 								px: 2,
 								py: 1,

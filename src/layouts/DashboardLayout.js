@@ -8,6 +8,7 @@ import MHidden from '../components/@material-extend/MHidden.js';
 import { useEffect, useState } from 'react';
 import Logo from '../assets/portfolio-webapp-logo.png';
 import { Box } from '@mui/system';
+import { LinearProgress } from '@mui/material';
 
 // ----------------------------------------------------------------------
 
@@ -55,9 +56,17 @@ export default function DashboardLayout({ children }) {
 					alignItems: 'center',
 				}}
 			>
-				<Box boxShadow={20}>
-					<img src={Logo} width={92} height={92} />
-				</Box>
+				<div>
+					<Box boxShadow={20} flexDirection="column">
+						<img
+							style={{ borderRadius: 20 }}
+							src={Logo}
+							width={92}
+							height={92}
+						/>
+					</Box>
+					<LinearProgress sx={{ my: 1 }} />
+				</div>
 			</div>
 		);
 	}
@@ -65,7 +74,7 @@ export default function DashboardLayout({ children }) {
 	useEffect(() => {
 		setTimeout(() => {
 			setIsLoading(false);
-		}, 20000);
+		}, 2000);
 	}, []);
 
 	if (isLoading) return <Overlay />;

@@ -61,7 +61,7 @@ export default function Image({
 						height: 1,
 						objectFit: 'cover',
 						mixBlendMode: 'multiply',
-						filter: 'invert(10%) sepia(90%) hue-rotate(40deg) saturate(200%)',
+						filter: 'invert(30%) sepia(50%) hue-rotate(10deg) saturate(200%)',
 						'&:hover': {
 							filter: 'none',
 							mixBlendMode: '',

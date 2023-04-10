@@ -4,6 +4,7 @@ import {
 	CardActionArea,
 	CardContent,
 	CardMedia,
+	Divider,
 	Grid,
 	ListItem,
 	ListItemIcon,
@@ -125,15 +126,15 @@ const Contact = () => {
 											Say hello
 										</a>
 									</div>
+									<Typography variant="body2" color="text.secondary">
+										Here's the links 👇🏻
+										<br />
+									</Typography>
 								</Typography>
-								<Typography variant="body2" color="text.secondary">
-									Say Hello on Whatsapp oR E-mail! Here's the links 👇🏻
-									<br />
-								</Typography>
-								<ListItem disablePadding>
+								<ListItem disablePadding sx={{ mb: 0.3 }}>
 									<ListItemIcon>
 										<Icon
-											icon="material-symbols:play-arrow-outline"
+											icon="logos:whatsapp-icon"
 											width={18}
 											height={18}
 											color="#f59816"
@@ -145,11 +146,10 @@ const Contact = () => {
 										</a>
 									</Typography>
 								</ListItem>
-
 								<ListItem disablePadding>
 									<ListItemIcon>
 										<Icon
-											icon="material-symbols:play-arrow-outline"
+											icon="logos:google-gmail"
 											width={18}
 											height={18}
 											color="#f59816"

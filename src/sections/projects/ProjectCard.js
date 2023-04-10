@@ -3,6 +3,7 @@ import {
 	Card,
 	Divider,
 	Grid,
+	Link,
 	ListItem,
 	ListItemIcon,
 	Typography,
@@ -52,9 +53,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const ProjectCard = ({ project, index }) => {
+	console.log('index=>, index');
 	const classes = useStyles();
 	const { title, desc, images, technologies, gitrepo, livedemo } = project;
-	const isLeft = index / 2 == 0;
+	const isLeft = index % 2 == 0;
 	return (
 		<>
 			<Grid
@@ -168,8 +170,12 @@ const ProjectCard = ({ project, index }) => {
 							sx={{ mt: 3 }}
 							gap={3}
 						>
-							<Button variant="outlined">Github Repo</Button>
-							<Button variant="outlined">Live Demo</Button>
+							<Link href={gitrepo} underline="none">
+								<Button variant="outlined">Github Repo</Button>
+							</Link>
+							<Link href={livedemo} underline="none">
+								<Button variant="outlined">Live Demo</Button>
+							</Link>
 						</Grid>
 					</Grid>
 				</Grid>
