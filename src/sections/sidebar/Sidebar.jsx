@@ -14,7 +14,6 @@ import {
 	Tooltip,
 } from '@mui/material';
 import { styled } from '@mui/system';
-// import { Icon } from '@iconify/react';
 import { makeStyles } from '@mui/styles';
 const ListItemIconStyle = styled(ListItemIcon)({
 	height: 56,

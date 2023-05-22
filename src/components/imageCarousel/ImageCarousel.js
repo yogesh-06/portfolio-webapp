@@ -46,7 +46,6 @@ export default function ImageCarousel({ imgs }) {
 		arrows: false,
 		slidesToShow: 1,
 		draggable: false,
-		autoplay: true,
 		slidesToScroll: 1,
 		adaptiveHeight: true,
 		beforeChange: (current, next) => setCurrentIndex(next),
@@ -56,7 +55,6 @@ export default function ImageCarousel({ imgs }) {
 	const settings2 = {
 		dots: false,
 		arrows: false,
-		autoplay: true,
 		centerMode: true,
 		swipeToSlide: true,
 		focusOnSelect: true,
