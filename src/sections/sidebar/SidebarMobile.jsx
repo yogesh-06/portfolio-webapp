@@ -1,23 +1,9 @@
-import {
-	Box,
-	Divider,
-	Drawer,
-	Link,
-	ListItem,
-	ListItemText,
-	Typography,
-} from '@mui/material';
+import { Box, Divider, Drawer, Link, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { makeStyles } from '@mui/styles';
-// material
-import { useEffect } from 'react';
-// components
 
 // ----------------------------------------------------------------------
 
 const DRAWER_WIDTH = 330;
-
-const useStyles = makeStyles((theme) => ({}));
 
 const RootStyle = styled('div')(({ theme }) => ({
 	[theme.breakpoints.up('lg')]: {
@@ -52,7 +38,7 @@ export default function SidebarMobile({ isOpenSidebar, onCloseSidebar }) {
 		},
 	];
 
-	const renderContent = sideItems.map(({ id, number, title, index }) => (
+	const renderContent = sideItems.map(({ id, number, title }) => (
 		<>
 			<Divider sx={{ mb: 2.5 }} />
 			<Typography

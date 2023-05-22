@@ -56,7 +56,7 @@ const Home = () => {
 			} else {
 				setDisplayedLetters(newDisplayedLetters);
 			}
-		}, 150);
+		}, [150]);
 
 		return () => clearInterval(intervalId);
 	}, [currentWordIndex, displayedLetters]);

@@ -29,9 +29,7 @@ ImageCarousel.propTypes = {
 };
 
 export default function ImageCarousel({ imgs }) {
-	const [openLightbox, setOpenLightbox] = useState(false);
 	const [currentIndex, setCurrentIndex] = useState(0);
-	const [photoIndex, setPhotoIndex] = useState(currentIndex);
 
 	const [nav1, setNav1] = useState();
 
@@ -48,6 +46,7 @@ export default function ImageCarousel({ imgs }) {
 		arrows: false,
 		slidesToShow: 1,
 		draggable: false,
+		autoplay: true,
 		slidesToScroll: 1,
 		adaptiveHeight: true,
 		beforeChange: (current, next) => setCurrentIndex(next),
@@ -57,6 +56,7 @@ export default function ImageCarousel({ imgs }) {
 	const settings2 = {
 		dots: false,
 		arrows: false,
+		autoplay: true,
 		centerMode: true,
 		swipeToSlide: true,
 		focusOnSelect: true,
@@ -81,11 +81,6 @@ export default function ImageCarousel({ imgs }) {
 
 	const handleNext = () => {
 		slider2.current?.slickNext();
-	};
-
-	const handleClose = () => {
-		setOpenLightbox(false);
-		setPhotoIndex(0);
 	};
 
 	return (
@@ -114,7 +109,6 @@ export default function ImageCarousel({ imgs }) {
 								alt="large image"
 								src={img}
 								ratio="1/1"
-								onClick={() => setOpenLightbox(true)}
 								sx={{ cursor: 'zoom-in' }}
 							/>
 						))}
@@ -159,13 +153,7 @@ export default function ImageCarousel({ imgs }) {
 			>
 				<Slider {...settings2} asNavFor={nav1} ref={slider2}>
 					{imgs?.map((img, index) => (
-						<Box
-							key={img}
-							sx={{ px: 0.75 }}
-							onClick={() => {
-								setPhotoIndex(index);
-							}}
-						>
+						<Box key={img} sx={{ px: 0.75 }}>
 							{/* <Image
 								disabledEffect
 								alt="thumb image"

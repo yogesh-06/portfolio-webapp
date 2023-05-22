@@ -62,6 +62,7 @@ export default function DashboardLayout({ children }) {
 						<img
 							style={{ borderRadius: 20 }}
 							src={Logo}
+							alt="logo"
 							width={92}
 							height={92}
 						/>

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Container } from '@mui/system';
 import {
-	Divider,
 	Grid,
 	Typography,
 	Tabs,
@@ -34,12 +33,6 @@ function TabPanel(props) {
 		</div>
 	);
 }
-
-// TabPanel.propTypes = {
-// 	children: PropTypes.node,
-// 	index: PropTypes.number.isRequired,
-// 	value: PropTypes.number.isRequired,
-// };
 
 const useStyles = makeStyles((theme) => ({
 	tabLabel: {

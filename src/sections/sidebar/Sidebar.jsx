@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 // import Logo from '../../assets/logo.png';
 import './Sidebar.css';
 
@@ -15,7 +15,6 @@ import {
 } from '@mui/material';
 import { styled } from '@mui/system';
 // import { Icon } from '@iconify/react';
-import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 import { makeStyles } from '@mui/styles';
 const ListItemIconStyle = styled(ListItemIcon)({
 	height: 56,
@@ -63,7 +62,6 @@ const SidebarIcons = [
 
 const Sidebar = () => {
 	const classes = useStyles();
-	const [isHover, setIsHover] = useState(false);
 	return (
 		<aside className="aside">
 			<a href="#home" className="nav_logo">

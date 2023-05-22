@@ -1,46 +1,30 @@
-import { Container } from '@mui/system';
-import React, { useRef, useState } from 'react';
-import Page from '../../components/Page';
 import {
 	Card,
 	Grid,
-	IconButton,
 	ImageList,
 	ImageListItem,
 	Typography,
 	useMediaQuery,
 } from '@mui/material';
-import Cert3 from '../../assets/cert3.png';
+import { Container } from '@mui/system';
+import React, { useRef, useState } from 'react';
 import Cert from '../../assets/cert.jpg';
 import Cert2 from '../../assets/cert2.jpg';
+import Cert3 from '../../assets/cert3.png';
 import Cert4 from '../../assets/cert4.png';
 import Cert5 from '../../assets/cert5.jpg';
 import Cert6 from '../../assets/cert6.jpg';
-import Swex from '../../assets/swex.jpg';
-import Hackathon from '../../assets/hackathon.jpeg';
 import Gdg from '../../assets/gdg.jpg';
+import Hackathon from '../../assets/hackathon.jpeg';
+import Swex from '../../assets/swex.jpg';
 
+import { Icon } from '@iconify/react';
+import { makeStyles } from '@mui/styles';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css';
 import Award from '../../assets/award.png';
 import Award2 from '../../assets/award2.png';
-import Slider from 'react-slick';
-import Image from '../../components/image/Image';
-import { makeStyles } from '@mui/styles';
-import { Icon } from '@iconify/react';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
-const useStyles = makeStyles((theme) => ({
-	ScrollButtons: {
-		backgroundColor: 'rgba(0, 0, 0, 0.3)',
-		height: '1.5rem',
-		width: '1.5rem',
-		'&:hover': { backgroundColor: 'rgba(0, 0, 0, 0.6)' },
-		[theme.breakpoints.up('md')]: {
-			height: '2.5rem',
-			width: '2.5rem',
-		},
-	},
-}));
 
 export default function Recognition() {
 	const sliderRef = useRef();
@@ -145,13 +129,6 @@ export default function Recognition() {
 				},
 			},
 		],
-	};
-
-	const previous = () => {
-		sliderRef.current.slickPrev();
-	};
-	const next = () => {
-		sliderRef.current.slickNext();
 	};
 
 	return (

@@ -83,7 +83,7 @@ export default function DashboardNavbar({ onOpenSidebar }) {
 			<ToolbarStyle>
 				<Box boxShadow={20} id="#home">
 					<Link href="#home">
-						<img className={classes.logoImg} style={{}} src={Logo} />
+						<img className={classes.logoImg} alt="logo" src={Logo} />
 					</Link>
 				</Box>
 				<Box sx={{ flexGrow: 100 }} />
