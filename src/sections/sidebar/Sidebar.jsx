@@ -5,7 +5,14 @@ import './Sidebar.css';
 import Divider from '@mui/material/Divider';
 // or
 import { Icon } from '@iconify/react';
-import { Grid, Link, List, ListItem, ListItemIcon } from '@mui/material';
+import {
+	Grid,
+	Link,
+	List,
+	ListItem,
+	ListItemIcon,
+	Tooltip,
+} from '@mui/material';
 import { styled } from '@mui/system';
 // import { Icon } from '@iconify/react';
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
@@ -29,10 +36,10 @@ const SidebarIcons = [
 		href: 'https://github.com/yogesh-06',
 	},
 	{
-		title: 'Instagram',
-		color: '#E1306C',
-		icon: 'ph:instagram-logo-light',
-		href: 'https://www.instagram.com/',
+		title: 'Facebook',
+		color: '#2962ff',
+		icon: 'uit:facebook-f',
+		href: 'https://www.facebook.com/YogRajputt/',
 	},
 	{
 		title: 'Twitter',
@@ -70,7 +77,7 @@ const Sidebar = () => {
 							{SidebarIcons.map((item, index) => (
 								<ListItem key={index} disablePadding>
 									<ListItemIconStyle>
-										<Link href={item.href}>
+										<Link href={item.href} target="_blank">
 											<Grid
 												className={classes.iconHover}
 												sx={{
@@ -84,7 +91,9 @@ const Sidebar = () => {
 													},
 												}}
 											>
-												<Icon icon={item.icon} width={30} height={30} />
+												<Tooltip title={item.title} placement="right">
+													<Icon icon={item.icon} width={30} height={30} />
+												</Tooltip>
 											</Grid>
 										</Link>
 									</ListItemIconStyle>

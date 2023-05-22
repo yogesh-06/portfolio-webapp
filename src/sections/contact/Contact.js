@@ -1,22 +1,18 @@
+import { Icon } from '@iconify/react';
 import {
-	Button,
 	Card,
 	CardActionArea,
 	CardContent,
-	CardMedia,
-	Divider,
 	Grid,
 	ListItem,
 	ListItemIcon,
-	TextField,
 	Typography,
 } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import { Box, Container } from '@mui/system';
+import { Container } from '@mui/system';
 import React from 'react';
-import ContactForm from '../contact/ContactForm.js';
 import Page from '../../components/Page';
-import { Icon } from '@iconify/react';
+import ContactForm from '../contact/ContactForm.js';
 
 const useStyles = makeStyles((theme) => ({
 	title: {
@@ -120,7 +116,7 @@ const Contact = () => {
 								<Typography gutterBottom variant="h5" component="div">
 									<div>
 										<a
-											class="badge-base__link LI-simple-link"
+											className="badge-base__link LI-simple-link"
 											href="https://in.linkedin.com/in/pathfinder06?trk=profile-badge"
 										>
 											Say hello

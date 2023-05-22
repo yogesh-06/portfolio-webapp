@@ -97,6 +97,14 @@ export default function ImageCarousel({ imgs }) {
 						borderRadius: 2,
 						overflow: 'hidden',
 						position: 'relative',
+						transition: 'filter 0.9s',
+						mixBlendMode: 'luminosity',
+						filter: 'brightness(1.2)  saturate(1.2)',
+						'&:hover': {
+							filter: 'none',
+							mixBlendMode: 'lighten',
+							transition: 'filter 0.9s',
+						},
 					}}
 				>
 					<Slider {...settings1} asNavFor={nav2} ref={slider1}>
@@ -123,6 +131,7 @@ export default function ImageCarousel({ imgs }) {
 			<Box
 				sx={{
 					mx: 'auto',
+					display: 'none',
 					'& .slick-current .isActive': { opacity: 1 },
 					...(imgs?.length === 1 && { maxWidth: THUMB_SIZE * 1 + 16 }),
 					...(imgs?.length === 2 && { maxWidth: THUMB_SIZE * 2 + 32 }),

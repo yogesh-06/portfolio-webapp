@@ -6,6 +6,7 @@ import React from 'react';
 import Profile from '../../assets/profile.jpg';
 import Page from '../../components/Page';
 import './About.css';
+import Recognition from './Recognition';
 
 const useStyles = makeStyles((theme) => ({
 	summary: {
@@ -51,7 +52,7 @@ const technologies = [
 	},
 	{
 		title: 'Next-JS',
-		icon: 'logos:nextjs',
+		icon: 'devicon:nextjs-wordmark',
 		color: '#fff',
 	},
 	{
@@ -196,6 +197,7 @@ const About = () => {
 					</Grid>
 				</Grid>
 			</Grid>
+			<Recognition />
 		</Container>
 	);
 };

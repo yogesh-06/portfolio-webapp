@@ -59,13 +59,7 @@ export default function Image({
 					sx={{
 						width: 1,
 						height: 1,
-						objectFit: 'cover',
-						mixBlendMode: 'multiply',
-						filter: 'invert(30%) sepia(50%) hue-rotate(10deg) saturate(200%)',
-						'&:hover': {
-							filter: 'none',
-							mixBlendMode: '',
-						},
+						objectFit: 'fill',
 					}}
 					{...other}
 				/>

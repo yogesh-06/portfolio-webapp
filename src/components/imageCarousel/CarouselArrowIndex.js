@@ -49,13 +49,13 @@ export default function CarouselArrowIndex({
 
 	return (
 		<RootStyle {...other}>
-			{/* <ArrowStyle size="small" onClick={onPrevious}>
+			<ArrowStyle size="small" onClick={onPrevious}>
 				{leftIcon(customIcon, isRTL)}
-			</ArrowStyle> */}
+			</ArrowStyle>
 
-			{/* <Typography variant="subtitle2">
+			<Typography variant="subtitle2">
 				{index + 1}/{total}
-			</Typography> */}
+			</Typography>
 
 			<ArrowStyle size="small" onClick={onNext}>
 				{rightIcon(customIcon, isRTL)}
@@ -68,7 +68,7 @@ export default function CarouselArrowIndex({
 
 const leftIcon = (customIcon, isRTL) => (
 	<Icon
-		icon={customIcon || 'eva:arrow-right-fill'}
+		icon={customIcon || 'eva:arrow-left-fill'}
 		sx={{
 			width: 20,
 			height: 20,

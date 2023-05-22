@@ -7,6 +7,7 @@ import SidebarMobile from '../sections/sidebar/SidebarMobile.jsx';
 import MHidden from '../components/@material-extend/MHidden.js';
 import { useEffect, useState } from 'react';
 import Logo from '../assets/portfolio-webapp-logo.png';
+
 import { Box } from '@mui/system';
 import { LinearProgress } from '@mui/material';
 

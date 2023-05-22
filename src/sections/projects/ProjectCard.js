@@ -6,6 +6,7 @@ import {
 	Link,
 	ListItem,
 	ListItemIcon,
+	Tooltip,
 	Typography,
 } from '@mui/material';
 import { makeStyles } from '@mui/styles';
@@ -30,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
 		background: '#112240',
 		[theme.breakpoints.up('md')]: {
 			marginTop: 10,
-			width: 730,
+			width: 700,
 			height: 150,
 			marginLeft: -500,
 		},
@@ -53,10 +54,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const ProjectCard = ({ project, index }) => {
-	console.log('index=>, index');
 	const classes = useStyles();
 	const { title, desc, images, technologies, gitrepo, livedemo } = project;
-	const isLeft = index % 2 == 0;
+	const isLeft = index % 2 === 0;
 	return (
 		<>
 			<Grid
@@ -133,17 +133,19 @@ const ProjectCard = ({ project, index }) => {
 							zIndex={201}
 						>
 							{technologies.map((item, index) => {
-								const { icon } = item;
+								const { title, icon } = item;
 								return (
 									<Grid item xs={2} sm={2} md={2}>
 										<ListItem key={index} disablePadding>
 											<ListItemIcon>
-												<Icon
-													icon={icon}
-													width={28}
-													height={28}
-													color="#f59816"
-												/>
+												<Tooltip title={title}>
+													<Icon
+														icon={icon}
+														width={28}
+														height={28}
+														color="#f59816"
+													/>
+												</Tooltip>
 											</ListItemIcon>
 										</ListItem>
 									</Grid>
@@ -170,10 +172,10 @@ const ProjectCard = ({ project, index }) => {
 							sx={{ mt: 3 }}
 							gap={3}
 						>
-							<Link href={gitrepo} underline="none">
+							<Link href={gitrepo} target="_blank" underline="none">
 								<Button variant="outlined">Github Repo</Button>
 							</Link>
-							<Link href={livedemo} underline="none">
+							<Link href={livedemo} target="_blank" underline="none">
 								<Button variant="outlined">Live Demo</Button>
 							</Link>
 						</Grid>
@@ -191,114 +193,6 @@ const ProjectCard = ({ project, index }) => {
 					</Grid>
 				)}
 			</Grid>
-
-			{/* <Grid
-				container
-				justifyContent="space-around"
-				alignItems="center"
-				spacing={5}
-				sx={{ my: 4 }}
-			>
-				<Grid item xs={12} md={4} lg={4}>
-					<Grid
-						container
-						direction="column"
-						justifyContent="start"
-						alignItems="flex-start"
-					>
-						<Typography
-							variant="caption"
-							sx={{
-								color: (theme) => theme.palette.primary.main,
-							}}
-						>
-							Featured Project
-						</Typography>
-						<Typography
-							variant="h3"
-							sx={{
-								fontWeight: '650',
-								color: '#ccd6f6',
-								fontFamily: '-apple-system,system-ui',
-							}}
-						>
-							KisanBuddy
-						</Typography>
-						<Card
-							className={classes.rightCardStyle}
-							// sx={{ width: 1000, height: 200, ml: -100 }}
-						>
-							<Typography
-								variant="body1"
-								component="div"
-								className={classes.summary}
-								sx={{
-									my: 2,
-									color: '#8892b0',
-									fontFamily: '-apple-system,system-ui',
-									textAlign: { xs: 'left', md: 'left' },
-								}}
-							>
-								KisanBuddy.in appears to be an online marketplace for
-								agricultural products and services in India. It allows farmers
-								to connect with potential buyers and suppliers of various
-								agricultural inputs, such as seeds, fertilizers, and machinery.
-								In short, KisanBuddy.in aims to simplify the agricultural supply
-								chain and provide farmers with the tools and resources they need
-								to succeed.
-							</Typography>
-						</Card>
-
-						<Grid
-							container
-							marginTop={{ md: 3, xs: -5 }}
-							marginLeft={2}
-							zIndex={201}
-						>
-							{technologies.map((item, index) => {
-								const { icon } = item;
-								return (
-									<Grid item xs={2} sm={2} md={2}>
-										<ListItem key={index} disablePadding>
-											<ListItemIcon>
-												<Icon
-													icon={icon}
-													width={28}
-													height={28}
-													color="#f59816"
-												/>
-											</ListItemIcon>
-										</ListItem>
-									</Grid>
-								);
-							})}
-						</Grid>
-						<Divider
-							sx={{
-								mt: 3,
-								mr: -90,
-								width: 600,
-								display: { xs: 'none', md: 'block' },
-								border: '1.1px solid rgb(47 70 93 / 81%)',
-							}}
-						/>
-						<Grid
-							container
-							display="flex"
-							justifyContent={{ xs: 'center', md: 'flex-start' }}
-							alignItems="center"
-							sx={{ mt: { xs: 6, md: 3 } }}
-							gap={3}
-						>
-							<Button variant="outlined">Github Repo</Button>
-							<Button variant="outlined">Live Demo</Button>
-						</Grid>
-					</Grid>
-				</Grid>
-				<Grid item xs={12} md={4} lg={5} display={{ xs: 'none', md: 'block' }}>
-					<ImageCarousel imgs={images} />
-				</Grid>
-			</Grid> */}
 		</>
 	);
 };
