@@ -49,7 +49,7 @@ function App() {
 							severity="success"
 							sx={{ width: '100%' }}
 						>
-							Try desktop computer for better experience.
+							Try desktop/computer for better experience.
 						</Alert>
 					</Snackbar>
 				)}
