@@ -41,7 +41,10 @@ const ContactForm = () => {
 	const classes = useStyles();
 
 	return (
-		<form action="https://formsubmit.co/yograjput6662@gmail.com" method="POST">
+		<form
+			action="https://formsubmit.co/2eb9226bf7d806f79c7fc0c21dfb99dd"
+			method="POST"
+		>
 			<Grid container spacing={1}>
 				<input type="hidden" name="_subject" value="New e-mail!" />
 				{/* <input type="hidden" name="_captcha" value="false" /> */}

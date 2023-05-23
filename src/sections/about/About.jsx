@@ -113,7 +113,7 @@ const About = () => {
 							fontFamily: '-apple-system,system-ui',
 						}}
 					>
-						Hello! My name is Yogesh and I'm a React Developer with over 2 years
+						Hello! My name is Yogesh and I'm a React Developer with over 3 years
 						of experience building scalable and user-friendly web applications.
 						I'm passionate about creating responsive and functional interfaces
 						using React, Redux, and other modern web technologies.
