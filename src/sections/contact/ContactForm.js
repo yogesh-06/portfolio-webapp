@@ -81,7 +81,7 @@ const ContactForm = () => {
 				<input
 					type="hidden"
 					name="_next"
-					value="http://localhost:3000/#contact"
+					value="https://yogesh-06.github.io/portfolio-webapp/#contact"
 				/>
 				<input
 					type="hidden"
