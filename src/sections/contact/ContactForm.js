@@ -48,13 +48,13 @@ const ContactForm = () => {
 			<Grid container spacing={1}>
 				<input type="hidden" name="_subject" value="New e-mail!" />
 				{/* <input type="hidden" name="_captcha" value="false" /> */}
-				<Grid item xs={12} marginTop={2} md={6} sm={12}>
+				<Grid item xs={12} marginTop={2} md={12} sm={12}>
 					<TextField
 						required
 						name="name"
 						type="text"
 						fullWidth
-						label="Name"
+						label="Full Name"
 						variant="filled"
 						InputProps={{
 							classes: {
@@ -70,6 +70,22 @@ const ContactForm = () => {
 						fullWidth
 						name="email"
 						label="E-mail"
+						variant="filled"
+						InputProps={{
+							classes: {
+								input: classes.textfield,
+							},
+						}}
+					/>
+				</Grid>
+				<Grid item xs={12} marginTop={2} md={6} sm={12}>
+					<TextField
+						required
+						type="number"
+						fullWidth
+						name="phoneNumber"
+						inputProps={{ min: 10, max: 10 }}
+						label="Phone No."
 						variant="filled"
 						InputProps={{
 							classes: {
