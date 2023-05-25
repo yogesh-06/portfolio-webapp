@@ -81,7 +81,11 @@ export default function DashboardNavbar({ onOpenSidebar }) {
 	return (
 		<RootStyle>
 			<ToolbarStyle>
-				<Box boxShadow={20} id="#home">
+				<Box
+					boxShadow={20}
+					id="#home"
+					sx={{ ml: { xs: 0, sm: 0, lg: -2, md: -2 } }}
+				>
 					<Link href="#home">
 						<img className={classes.logoImg} alt="logo" src={Logo} />
 					</Link>
@@ -115,6 +119,7 @@ export default function DashboardNavbar({ onOpenSidebar }) {
 								key={index}
 								sx={{
 									display: 'flex',
+									alignItems: 'center',
 									fontFamily: 'monospace',
 								}}
 							>
