@@ -81,12 +81,13 @@ const ContactForm = () => {
 				<Grid item xs={12} marginTop={2} md={6} sm={12}>
 					<TextField
 						required
-						type="number"
 						fullWidth
+						type="number"
 						name="phoneNumber"
-						inputProps={{ min: 10, max: 10 }}
 						label="Phone No."
 						variant="filled"
+						max="10"
+						pattern="[1-9]{1}[0-9]{9}"
 						InputProps={{
 							classes: {
 								input: classes.textfield,

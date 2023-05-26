@@ -14,10 +14,11 @@ import Cert3 from '../../assets/cert3.png';
 import Cert4 from '../../assets/cert4.png';
 import Cert5 from '../../assets/cert5.jpg';
 import Cert6 from '../../assets/cert6.jpg';
+import Cert7 from '../../assets/udemy-cert.jpeg';
 import Gdg from '../../assets/gdg.jpg';
 import Hackathon from '../../assets/hackathon.jpeg';
 import Swex from '../../assets/swex.jpg';
-
+import present from '../../assets/presantation.jpg';
 import { Icon } from '@iconify/react';
 import { makeStyles } from '@mui/styles';
 import Slider from 'react-slick';
@@ -25,7 +26,6 @@ import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import Award from '../../assets/award.png';
 import Award2 from '../../assets/award2.png';
-
 export default function Recognition() {
 	const sliderRef = useRef();
 	const mediumViewport = useMediaQuery('(min-width:460px)');
@@ -78,17 +78,29 @@ export default function Recognition() {
 		);
 	};
 
-	const awards = [Cert, Cert2, Award, Award2, Cert3, Cert5, Cert6, Cert4];
+	const awards = [
+		Cert,
+		Cert2,
+		Award,
+		Award2,
+		Cert7,
+		Cert3,
+		Cert5,
+		Cert6,
+		Cert4,
+	];
 	const Images = [
 		Cert,
 		Cert2,
 		Award,
 		Award2,
+		Cert7,
 		Cert3,
 		Cert5,
 		Cert6,
 		Cert4,
 		Swex,
+		present,
 		Hackathon,
 		Gdg,
 	];

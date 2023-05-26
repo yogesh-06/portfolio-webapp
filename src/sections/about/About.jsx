@@ -197,7 +197,7 @@ const About = () => {
 					</Grid>
 				</Grid>
 			</Grid>
-			{/* <Recognition /> */}
+			<Recognition />
 		</Container>
 	);
 };
