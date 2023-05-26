@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio-webapp/static/css/main.9a28e161.css",
-    "main.js": "/portfolio-webapp/static/js/main.72cdaec2.js",
+    "main.js": "/portfolio-webapp/static/js/main.49b32deb.js",
     "static/js/787.12547c35.chunk.js": "/portfolio-webapp/static/js/787.12547c35.chunk.js",
     "static/media/wildvine1.png": "/portfolio-webapp/static/media/wildvine1.5f0a15d759118f9acc1f.png",
     "static/media/wildvine3.png": "/portfolio-webapp/static/media/wildvine3.234693c1c372141f9742.png",
@@ -26,8 +26,10 @@
     "static/media/yogesh-resume.jpg": "/portfolio-webapp/static/media/yogesh-resume.f7221af907e6f9260f7e.jpg",
     "static/media/cert4.png": "/portfolio-webapp/static/media/cert4.374642a693201faee758.png",
     "static/media/cert3.png": "/portfolio-webapp/static/media/cert3.2fe6a10c78117df1145c.png",
+    "static/media/udemy-cert.jpeg": "/portfolio-webapp/static/media/udemy-cert.298a67f33610b6762480.jpeg",
     "static/media/award2.png": "/portfolio-webapp/static/media/award2.84ea665a695bfd143d55.png",
     "static/media/award.png": "/portfolio-webapp/static/media/award.8c658f9d6b238f65e1c5.png",
+    "static/media/presantation.jpg": "/portfolio-webapp/static/media/presantation.13b54417310e773563cd.jpg",
     "static/media/hackathon.jpeg": "/portfolio-webapp/static/media/hackathon.e096ad453ffdf8d3e420.jpeg",
     "static/media/gdg.jpg": "/portfolio-webapp/static/media/gdg.6678e2c2d948b2ac173c.jpg",
     "static/media/profile.jpg": "/portfolio-webapp/static/media/profile.e74384786fdf40636bff.jpg",
@@ -39,11 +41,11 @@
     "static/media/slick.woff": "/portfolio-webapp/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/portfolio-webapp/index.html",
     "main.9a28e161.css.map": "/portfolio-webapp/static/css/main.9a28e161.css.map",
-    "main.72cdaec2.js.map": "/portfolio-webapp/static/js/main.72cdaec2.js.map",
+    "main.49b32deb.js.map": "/portfolio-webapp/static/js/main.49b32deb.js.map",
     "787.12547c35.chunk.js.map": "/portfolio-webapp/static/js/787.12547c35.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9a28e161.css",
-    "static/js/main.72cdaec2.js"
+    "static/js/main.49b32deb.js"
   ]
 }
