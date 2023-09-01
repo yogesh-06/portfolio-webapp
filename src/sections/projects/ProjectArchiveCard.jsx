@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 		background: '#112240',
 		[theme.breakpoints.up('md')]: {
 			width: 350,
-			height: 330,
+			height: 355,
 		},
 	},
 }));
@@ -184,7 +184,7 @@ const projects = [
 function ProjectArchiveCard() {
 	const classes = useStyles();
 	return (
-		<Grid container spacing={2} sx={{ px: { xs: 3, sm: 3, md: 12 } }} mt={2}>
+		<Grid container spacing={2} sx={{ px: { xs: 3, sm: 3, md: 8 } }} mt={2}>
 			{projects.map((project, index) => {
 				return (
 					<Grid
@@ -273,7 +273,7 @@ function ProjectArchiveCard() {
 									{project.desc}
 								</Typography>
 
-								<Grid container justifyContent="flex-start" alignItems="center">
+								<Grid container justifyContent="flex-start" alignItems="center" >
 									{project.technologies.map((item, index) => {
 										const { title, icon } = item;
 										return (

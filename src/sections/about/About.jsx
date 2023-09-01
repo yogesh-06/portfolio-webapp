@@ -6,13 +6,13 @@ import React from 'react';
 import Profile from '../../assets/profile.jpg';
 import Page from '../../components/Page';
 import './About.css';
-import Recognition from './Recognition';
+// import Recognition from './Recognition';
 
 const useStyles = makeStyles((theme) => ({
 	summary: {
 		fontSize: 16,
 		[theme.breakpoints.up('md')]: {
-			fontSize: 20,
+			fontSize: 19,
 		},
 	},
 	profileImage: {
@@ -101,14 +101,14 @@ const About = () => {
 				alignItems="flex-start"
 				spacing={5}
 			>
-				<Grid item xs={12} md={7} lg={7}>
+				<Grid item xs={12} md={7} lg={7}  >
 					<Typography
 						variant="body1"
 						component="div"
 						className={classes.summary}
 						sx={{
 							mt: 3,
-							width: { md: 400, lg: 700 },
+							width: { md: 400, lg: 650 },
 							color: '#8892b0',
 							fontFamily: '-apple-system,system-ui',
 						}}

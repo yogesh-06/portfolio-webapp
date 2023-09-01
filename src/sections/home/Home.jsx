@@ -126,13 +126,16 @@ const Home = () => {
 							href="https://www.weoto.in/"
 							style={{ color: '#f59816', fontWeight: 'bold' }}
 						>
-							Weoto.
+							Weoto Technologies.
 						</a>
 					</span>
 				</Typography>
 				{/* <ScrollDown /> */}
 				<Button
-					variant="outlined"
+
+target="_blank"
+href='https://www.linkedin.com/in/pathfinder06/'
+variant="outlined"
 					sx={{
 						p: 2,
 						px: 3,

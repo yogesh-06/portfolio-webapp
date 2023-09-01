@@ -14,7 +14,7 @@ import { styled } from '@mui/material/styles';
 import MHidden from '../@material-extend/MHidden';
 import DownloadIcon from '@mui/icons-material/Download';
 import Logo from '../../assets/portfolio-webapp-logo.png';
-import Resume from '../../assets/yogesh-resume.jpg';
+import Resume from '../../assets/yogesh-cv.pdf';
 import { makeStyles } from '@mui/styles';
 // ----------------------------------------------------------------------
 
